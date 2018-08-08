@@ -1,0 +1,42 @@
+<div ng-controller="Features">
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="quarter" data-toggle="tooltip" data-html="true" title="<b>Q1</b>">2018Q1</div>
+                    <div ng-repeat="stream in streams">
+                        <div class="stream">{{stream}}</div>
+                        <div ng-repeat="feature in time.x2018Q1[ stream ] | orderBy: 'name'">
+                            <li class="{{feature.status}}" title="{{feature.desc}}">{{feature.name}}</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quarter">2018Q2</div>
+                    <div ng-repeat="stream in streams">
+                        <div class="stream">{{stream}}</div>
+                        <div ng-repeat="feature in time.x2018Q2[ stream ] | orderBy: 'name'">
+                        <li class="{{feature.status}}" title="{{feature.desc}}">{{feature.name}}</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quarter">2018Q3</div>
+                    <div ng-repeat="stream in streams">
+                        <div class="stream">{{stream}}</div>
+                        <div ng-repeat="feature in time.x2018Q3[ stream ] | orderBy: 'name'">
+                            <li class="{{feature.status}}" title="{{feature.desc}}">{{feature.name}}</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="quarter">2018Q4</div>
+                    <div ng-repeat="stream in streams">
+                        <div class="stream">{{stream}}</div>
+                        <div ng-repeat="feature in time.x2018Q4[ stream ] | orderBy: 'name'">
+                            <li class="{{feature.status}}" title="{{feature.desc}}">{{feature.name}}</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
